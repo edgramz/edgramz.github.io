@@ -1,0 +1,677 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Module 1 - Introduction to Economics</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="c174c6f6-d08a-4483-9a47-59cdad201c6d" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📈</span></div><h1 class="page-title"><strong>Module 1 - Introduction to Economics</strong></h1></header><div class="page-body"><figure id="4f04c3f4-4d5d-477c-b20e-4a00b89861af" class="link-to-page"><a href="https://www.notion.so/Module-1-Quiz-4f04c3f44d5d477cb20e4a00b89861af">Module 1 Quiz</a></figure><h1 id="0a2fcbe1-86ee-4940-b99b-36a967091348" class="">Introduction/Overview</h1><p id="fe3c5ddf-9aed-4104-a717-12861d434bab" class="">This module will discuss the vital role of economics in human life and its impact to our society in general. Understanding the three important questions and key concepts in economics will give the students a broader insight why economics is important as a discipline.</p><h1 id="95aa6411-1e04-42f3-ab4c-e409304b5769" class="">Learning Outcomes</h1><p id="1edd94e7-6054-471f-b4a4-1019a559fffc" class="">At the end of the module, the students should be able to:</p><ol type="a" id="0b3fcf38-3918-4af4-82e9-3dcbc7dc8e25" class="numbered-list" start="1"><li>Understand the importance of Economics and its key concepts.</li></ol><ol type="a" id="a9e7c3d5-0aa3-4c43-aaf2-adf1fa08eabb" class="numbered-list" start="2"><li>Explain the Three Questions in Economics, Market System, Law of Supply and Demand  and Inflation.</li></ol><h1 id="7f4a473a-cdc4-46a4-9df7-7dd32ac38cca" class="">Content</h1><h2 id="20a7fad3-66d3-4769-85ca-d0cd4b58017a" class="">Lesson 1</h2><h3 id="2cbd5cc7-b3cd-4f47-8b13-7efbe4cde8e8" class=""><strong>Definition of Economics</strong></h3><p id="00690d43-4e0a-4719-bd33-f05200afdfba" class="">Economics is a social science concerned with the production, distribution, and consumption of goods and services. It studies how individuals, businesses, governments, and nations make choices about how to allocate resources.</p><p id="2c612edd-82d7-4cf4-825f-623f267bf0fd" class="">Economics can generally be broken down into macroeconomics, which concentrates on the behavior of the economy as a whole, and microeconomics, which focuses on individual people and businesses.</p><h3 id="fbd64daa-68e0-4955-a9cc-c9c83e70b443" class=""><strong>Key Concepts in Economics</strong></h3><p id="0533ea73-609e-4c05-a372-e6a6550a370a" class=""><em>Economics is the study of how people allocate scarce resources for production, distribution, and consumption, both individually and collectively.</em></p><p id="96f0139e-e971-4d3d-b73b-ea7404e020e5" class=""><em>Two major types of economics are microeconomics, which focuses on the behavior of individual consumers and producers, and macroeconomics, which examine overall economies on a regional, national, or international scale.</em></p><p id="76816d0a-94d4-4671-89eb-a62b7abcd2f0" class=""><em>Economics is especially concerned with efficiency in production and exchange and uses models and assumptions to understand how to create incentives and policies that will maximize efficiency.</em></p><p id="707e842a-ec36-45d8-8e22-cea293168a3b" class=""><em>Economists formulate and publish numerous economic indicators, such as gross domestic product (GDP) and the Consumer Price Index (CPI).</em></p><p id="fffb2605-0a14-4760-a8c8-8b2820bfdebd" class=""><em>Capitalism, socialism, and communism are types of economic systems</em>.</p><h3 id="a2af7c4c-4f1e-4eb4-8da6-54ea5af889b2" class=""><strong>Understanding Economics</strong></h3><p id="9d60d185-da8e-4623-87aa-60fd4b51fb67" class="">One of the earliest recorded economic thinkers was the 8th<a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a>century B.C. Greek farmer/poet Hesiod, who wrote that labor, materials, and time needed to be allocated efficiently to overcome scarcity. But the founding of modern Western economics occurred much later, generally credited to the publication of Scottish philosopher Adam Smith&#x27;s 1776 book, An Inquiry Into the Nature and Causes of the Wealth of Nations.</p><p id="e6690b29-0feb-4a42-9376-bcdba4086e73" class="">The principle (and problem) of economics is that human beings have unlimited wants and occupy a world of limited means. For this reason, the concepts of efficiency and productivity are held paramount by economists. Increased productivity and a more efficient use of resources, they argue, could lead to a higher standard of living.</p><p id="1b9273f0-91a5-4b26-b27a-7ac108f1c9c6" class="">Despite this view, economics has been pejoratively known as the &quot;dismal science,&quot; a term coined by Scottish historian Thomas Carlyle in 1849. He used it to criticize the liberal views on race and social equality of contemporary economists like John Stuart Mill, though some sources suggest Carlyle was actually describing the gloomy predictions by Thomas Robert Malthus that population growth would always outstrip the food supply.</p><h3 id="b930229a-4dd5-41e2-9476-aecd792bd73a" class=""><strong>The Three Important Questions in Economics</strong></h3><ol type="1" id="816c43e8-0073-410b-84e8-e90279c1e8c9" class="numbered-list" start="1"><li><strong>What to produce?</strong><p id="5e653b12-9b52-4c6e-85cc-805194c6d94a" class="">Given limited resources of labor, raw materials and time, economic agents have to decide what to produce. Most primitive economies concentrate on producing food and shelter – the basic necessities of life. However, with increased productivity, the economy has more available resources which can be used for non<a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a>necessary goods, such as leisure and education.</p><p id="dd89b697-833d-4480-8879-95fa9a69488e" class="">In a free market, production is determined by market forces. Firms and entrepreneurs will produce goods in demand by consumers. In a mixed economy, with government intervention, the government may decide to produce more public goods – which are not profitable but do improve economic welfare.</p></li></ol><ol type="1" id="c9f47c00-bb73-476b-bb49-5deac8f45374" class="numbered-list" start="2"><li><strong>How to produce?</strong><p id="315d6d88-132f-4d29-9ba2-9e7c50dc9db4" class="">The entrepreneur will try and produce goods for the most profitable and cost<a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a>effective method. This motivation is behind the growth of technology and more efficient production methods, such as the assembly line. A government may regulate production methods to limit damage to the environment.</p></li></ol><ol type="1" id="45f900ac-3855-49b5-88af-386e5a7f9924" class="numbered-list" start="3"><li><strong>For whom to produce?</strong><p id="2f0634f2-4694-4508-a6a9-5c36ef9861c4" class="">In a free market, goods are provided for those with the ability to pay. This may be through a simple barter exchange or in more advanced economies through cash payments. In more altruistic societies, we may seek to produce goods and services for those, who may not be able to afford them. For example, many western economies provide health care free at the point of use.</p></li></ol><h3 id="d5cba16f-327b-4b77-9bf9-80403d55fd7f" class=""><strong>Scarcity</strong></h3><p id="81061865-db14-4f81-b202-dff29561199f" class="">The study of economics begins with the concept of scarcity. Scarcity describes the condition in which our wants are greater than the resources available to satisfy those wants. We face the problem of scarcity every day whether we think about it or not. It might be nice to dream about a world without scarcity, but the sad reality is that the things we want are scarce because the resources that are needed to produce them are scarce.</p><h3 id="1ea4197d-d360-476a-943f-52a95da44327" class=""><strong>Choice</strong></h3><p id="b5296272-5677-49b9-beb6-fa0254d17535" class="">This condition of limited resources to meet unlimited wants leaves us in a situation in which we must constantly choose which of our wants we will seek to satisfy. For example, because time is scarce you must choose whether you will sleep away the morning or go to school. You must choose whether to spend your allowance or save your allowance.</p><h3 id="723d643b-1991-4af8-8561-aeebb535b2f9" class=""><strong>Opportunity Cost</strong></h3><p id="daf9847d-54d9-445b-87d9-0af79cf60382" class="">The next logical step is that when making choices people incur a cost. If you choose to buy a video game instead of a movie, you incur an opportunity cost. Economists define an opportunity cost as the most highly valued opportunity given up when you make a choice.</p><h3 id="1f6ead34-e0bb-44ff-82e0-5d153d9c3ed2" class=""><strong>Positive versus Normative Economics</strong></h3><p id="4e3b38ee-2218-406b-9ef9-86d465d8b4c7" class="">Positive economics and normative economics are two standard branches of modern economics. Positive economics describes and explains various economic phenomena, while normative economics focuses on the value of economic fairness or what the economy should be.</p><p id="8ec81317-a327-43bb-8ae7-a2d09b3e04c9" class="">To put it simply, positive economics is called the &quot;what is&quot; branch of economics. Normative economics, on the other hand, is considered the branch of economics that tries to determine people&#x27;s desirability to different economic programs and conditions by asking what &quot;should&quot; be or what &quot;ought&quot; to be.</p><p id="39fbb398-2d4a-4d20-a60d-48b506e51807" class="">Positive economics is a stream of economics that focuses on the description, quantification, and explanation of economic developments, expectations, and associated phenomena. It relies on objective data analysis, relevant facts, and associated figures. It attempts to establish any cause<a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a>and<a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a>effect relationships or behavioral associations which can help ascertain and test the development of economics theories.</p><p id="d7592e1b-efbd-4785-9b5d-5c9392ad72b8" class="">Positive economics is objective and fact<a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a>based where the statements are precise, descriptive, and clearly measurable. These statements can be measured against tangible evidence or historical instances. There are no instances of approval<a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a>disapproval in positive economics.</p><p id="80472a0a-6deb-4bc0-a82e-19d7f43ce014" class="">Normative economics focuses on the ideological, opinion<a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a>oriented, prescriptive, value judgments, and &quot;what should be&quot; statements aimed toward economic development, investment projects, and scenarios. Its goal is to summarize people&#x27;s desirability (or the lack thereof) to various economic developments, situations, and programs by asking or quoting what should happen or what ought to be.</p><p id="6b988e20-4a4a-4a22-9fec-82f9576fe4d4" class="">Normative economics is subjective and value<a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a>based, originating from personal perspectives, feelings, or opinions involved in the decision<a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a>making process. Normative economics statements are rigid and prescriptive in nature. They often sound political or authoritarian, which is why this economic branch is also called &quot;what should be&quot; or &quot;what ought to be&quot; economics.</p><p id="4c18629a-e27a-4bf3-93a5-dc4214b87e4f" class="">An example of a normative economic statement is: &quot;The government should provide basic healthcare to all citizens.&quot; As you can deduce from this statement, it is value<a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a>based, rooted in personal perspective, and satisfies the requirement of what &quot;should&quot; be.</p><p id="a42a55c7-3d4e-4dec-be64-0572acf8f35e" class="">Here&#x27;s an example of a positive economic statement: &quot;Government<a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a>provided healthcare increases public expenditures.&quot; This statement is fact<a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a>based and has no value judgment attached to it. Its validity can be proven (or disproven) by studying healthcare spending where governments provide healthcare.</p><h2 id="82ebbb8c-661a-418f-b8d8-666c04e6f9fc" class="">Lesson 2</h2><h3 id="31382643-8402-4679-9e91-69efc053255c" class=""><strong>Types of Economics</strong></h3><p id="0c14ea02-41db-4fb9-bf2f-c32d814c239b" class="">The study of economics is generally broken down into two disciplines.</p><p id="16ad1512-aea8-4e32-9549-2a14e608a261" class="">Microeconomics focuses on how individual consumers and firm make decisions; these individuals can be a single person, a household, a business/organization or a government agency. Analyzing certain aspects of human behavior, microeconomics tries to explain they respond to changes in price and why they demand what they do at particular price levels. Microeconomics tries to explain how and why different goods are valued differently, how individuals make financial decisions, and how individuals best trade, coordinate and cooperate with one another. Microeconomics&#x27; topics range from the dynamics of supply and demand to the efficiency and costs associated with producing goods and services; they also include how labor is divided and allocated, uncertainty, risk, and strategic game theory.</p><p id="60342122-b77a-453d-b10f-d221cfd91e76" class="">Macroeconomics studies an overall economy on both a national and international level. Its focus can include a distinct geographical region, a country, a continent, or even the whole world. Topics studied include foreign trade, government fiscal and monetary policy, unemployment rates, the level of inflation and interest rates, the growth of total production output as reflected by changes in the Gross Domestic Product (GDP), and business cycles that result in expansions, booms, recessions, and depressions.</p><h3 id="830b605c-2e09-4ce1-b4ba-794c1c3cef68" class=""><strong>Schools of Economic Theory</strong></h3><p id="b54a2a25-7324-4495-bf9e-86dd99fb1693" class="">There are also schools of economic thought. Two of the most common are <strong>Monetarist </strong>and <strong>Keynesian</strong>. Monetarists have generally favorable views on free markets as the best way to allocate resources and argue that stable monetary policy is the best course for managing the economy. In contrast, the Keynesian approach believes that markets often don’t work well at allocating resources on their own and favors fiscal policy by an activist government in order to manage irrational market swings and recessions.</p><p id="a0c32c47-18a4-42c5-b9e4-d96ec10b251d" class="">Economic analysis often progresses through deductive processes, including mathematical logic, where the implications of specific human activities are considered in a &quot;means<a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a>ends&quot; framework. Some branches of economic thought emphasize empiricism, rather than formal logic—specifically, macroeconomics or Marshallian microeconomics, which attempt to use the procedural observations and falsifiable tests associated with the natural sciences.</p><p id="cea4946d-12d2-467d-95cb-f11e9d83d7b7" class="">Since true experiments cannot be created in economics, empirical economists rely on simplifying assumptions and retroactive data analysis. However, some economists argue economics is not well suited to empirical testing, and that such methods often generate incorrect or inconsistent answers.</p><h3 id="d0f3c910-fb29-43d0-99ac-eb91024a1160" class=""><strong>Economic Resources or Factors of Production</strong></h3><p id="eadfedce-a8d9-46c1-b03a-b8716c5a6d08" class="">The factors of production are resources that are the building blocks of the economy; they are what people use to produce goods and services. Economists divide the factors of production into four categories: land, labor, capital, and entrepreneurship.</p><p id="81b75b17-403e-4ffd-a7cc-e518d23eb307" class="">The first factor of production is <strong>land,</strong> but this includes any natural resource used to produce goods and services. This includes not just land, but anything that comes from the land. Some common land or natural resources are water, oil, copper, natural gas, coal, and forests. Land resources are the raw materials in the production process. These resources can be renewable, such as forests, or nonrenewable such as oil or natural gas. The income that resource owners earn in return for land resources is called rent.</p><p id="ea675694-22ec-464a-9731-61802951bab4" class="">The second factor of production is <strong>labor</strong>. Labor is the effort that people contribute to the production of goods and services. Labor resources include the work done by the waiter who brings your food at a local restaurant as well as the engineer who designed the bus that transports you to school. It includes an artist&#x27;s creation of a painting as well as the work of the pilot flying the airplane overhead. If you have ever been paid for a job, you have contributed labor resources to the production of goods or services. The income earned by labor resources is called wages and is the largest source of income for most people.</p><p id="5466dd0f-0d6a-4624-a8b3-9b4185a09f86" class="">The third factor of production is <strong>capital.</strong> Think of capital as the machinery, tools and buildings humans use to produce goods and services. Some common examples of capital include hammers, forklifts, conveyer belts, computers, and delivery vans. Capital differs based on the worker and the type of work being done. For example, a doctor may use a stethoscope and an examination room to provide medical services. Your teacher may use textbooks, desks, and a whiteboard to produce education services. The income earned by owners of capital resources is interest.</p><p id="83a261cc-bd12-4184-87b6-f8a05d41ef7d" class="">The fourth factor of production is <strong>entrepreneurship</strong>. An entrepreneur is a person who combines the other factors of production <a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a> land, labor, and capital <a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a> to earn a profit. The most successful entrepreneurs are innovators who find new ways produce goods and services or who develop new goods and services to bring to market. Without the entrepreneur combining land, labor, and capital in new ways, many of the innovations we see around us would not exist. Think of the entrepreneurship of Henry Ford or Bill Gates. Entrepreneurs are a vital engine of economic growth helping to build some of the largest firms in the world as well as some of the small businesses in your neighborhood. Entrepreneurs thrive in economies where they have the freedom to start businesses and buy resources freely. The payment to entrepreneurship is profit.</p><h2 id="a754aa68-02cb-4ff5-99f2-3bdaa20f6202" class="">Lesson 3</h2><h3 id="cd15cf98-1a59-47aa-9413-6a3ec9b1f7c1" class=""><strong>Types of Economic System</strong></h3><p id="fda8d680-d3a2-4c16-a557-64df8e43409d" class="">Economic systems are defined either by the way that stuff is produced or by how that stuff is allocated to people. For example, in primitive agrarian societies, people tend to self<a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a>produce all of their needs and wants at the level of the household or tribe. Family members would build their own dwellings, grow their own crops, hunt their own game, fashion their own clothes, bake their own bread, etc. This self<a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a>sufficient economic system is defined by very little division of labor and is also based on reciprocal exchange with other family or tribe members. In such a primitive society, the concept of private property didn’t typically exist as the needs of the community were produced by all for the sake of all.</p><p id="c649d1df-e266-46ba-948b-d922d6a9e0a9" class="">Later, as civilizations developed, economies based on production by social class emerged, such as feudalism and slavery. Slavery involved production by enslaved individuals who lacked personal freedom or rights and existed as the property of their owner. Feudalism was a system where a class of nobility, known as lords, owned all of the lands and leased out small parcels to peasants to farm, with peasants handing over much of their production to the lord. In return, the lord offered the peasants relative safety and security, including a place to live and food to eat.</p><h3 id="ea28705c-b4ef-417c-9d5b-aa8312ac5eb2" class=""><strong>Capitalism</strong></h3><p id="48315660-5e5c-4b4b-bd34-f7b49ae8d7f1" class="">Capitalism emerged with the advent of industrialization. Capitalism is defined as a system of production whereby business owners (capitalists) produce goods for sale in order to make a profit and not for personal consumption. In capitalism, capitalists own the business including the tools used for production as well as the finished product. Workers are hired in return for wages, and the worker owns neither the tools he uses in the production process nor the finished product when it’s complete. If you work at a shoe factory and you take home a pair of shoes at the end of the day, that’s stealing even though you made them with your own hands. This is because capitalist economies rely on the concept of private property to distinguish who legally owns what.</p><h3 id="a84db380-0f6a-46e6-933b-651d01a728b5" class=""><strong>Socialism</strong></h3><p id="6fb220b3-5236-4d24-a701-30384dfd1593" class="">Socialism is a system of production whereby workers collectively own the business, the tools of production, the finished product, and share the profits – instead of having business owners who retain private ownership of all of the business and simply hire workers in return for wages. Socialist production often does produce for profits and utilizes the market to distribute goods and services. In the U.S., worker co<a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a>ops are an example of socialist production organized under a broader capitalist system.</p><h3 id="3bb0a532-88dc-4682-86b9-193c2580e51c" class=""><strong>Communism</strong></h3><p id="435cc8c4-543d-4e34-adc0-e2d94acc292e" class="">Communism is a system of production where private property ceases to exist and the people of a society collectively own the tools of production. Communism does not use a market system, but instead relies on a central planner who organizes production (tells people who will work in what job) and distributes goods and services to consumers based on need. Sometimes this is called a command economy.</p><h3 id="d7a9e6cf-2f15-4420-9299-3f35da707f53" class=""><strong>Market System</strong></h3><p id="be90365d-aedc-46e2-a3f2-067291410540" class="">In an economy, a market system is any systematic process that enables many market players to bid and ask. In other words, a market system is a place (virtual or physical) that facilitates the matching of buyers and sellers. Many markets exist, and each can be defined based on a number of characteristics, such as what is being exchanged in the market, the regulations, who is allowed to participate, and how transactions occur.</p><p id="e36048a0-d836-4010-9a8d-c8ba916136ac" class="">One defining component of markets is the medium of exchange, or the price. In most American markets, the medium of exchange is dollars. Both buyers and sellers look at the price to determine whether or not they want to trade. A seller has a certain minimum price at which s/he is willing to sell, though s/he would happily accept more. Likewise, a buyer has a certain maximum price at which s/he is willing to buy, though s/he would happily pay less. If the minimum the seller would accept is less than the maximum a buyer would pay, a transaction can occur. Markets help such buyers and sellers meet to trade.</p><p id="77e01388-8b1c-4f17-951d-b473d11a9c71" class="">In market systems, prices are discoverable; both buyers and sellers are capable of finding out the current price at which a transaction could occur. Publishing current prices is a key component with a market system. The chosen prices impact the immediate group of buyers and sellers, but also may impact long term supply and demand decisions within the market.</p><p id="18d3f1da-c2bf-4d1b-ac7c-7aaa4e4d551f" class="">There are many examples of market systems. Perhaps the most famous is the stock market in which buyers and sellers trade stocks. The prices at which those sales occur is recorded, and is the basis for the stock price you may have seen in the newspaper or on TV. There are markets for many types of products other than stocks: the global oil market, your local farmers’ market, and eBay are all forms of markets with their own defining characteristics.</p><h2 id="734f451d-f8bb-4eac-9a1c-ec37db24bdf1" class="">Lesson 4</h2><h3 id="d17ebf88-6e3f-445f-8b0d-9a09e0bba2bb" class=""><strong>The Circular Flow Model</strong></h3><p id="8bc9e3de-0d22-4fc2-8be6-833383e67e74" class="">In economics, a circular flow model is a diagram that is used to represent the monetary transactions in an economy.</p><p id="2e83943f-d82a-42ef-bf5d-0097e19e03fb" class="">There are two flows present within the model including flows of physical things (goods or labor) and flows of money (what pays for physical things). A circular flow model depicts the inner workings of a market system and specific portions of the economy.</p><h3 id="069a638b-65bc-47ae-af93-ffae93dd80b4" class=""><strong>Key Ideas</strong></h3><p id="e272e1c9-29d1-4e13-b62d-e1e3863515b2" class="">There are two flows present within the model including flows of physical things (goods or labor) and flows of money (what pays for physical things).</p><p id="4999ec4f-182c-415d-adfe-acb366f0c90a" class="">The circular flow of income follows a specific pattern: Production → Income → Expenditure → Production.</p><p id="dc4231d9-c307-4edd-a50f-1079d4e3ea8c" class="">The production possibility frontier can be used to illustrate the circular flow model.</p><p id="e5e81a17-d16a-4de2-bf41-0215253347fd" class="">Economists use data, statistics, and natural experiments in order to make economic “laws” that explain general patterns.</p><p id="28d9d7b3-3cf7-404c-9bfd-d8005d4ecacb" class="">
+</p><figure id="ec68ec9f-d3c8-4897-85fc-521cf13b366c" class="image"><a href="Module%201%20-%20Introduction%20to%20Economics%20c174c6f6d08a44839a4759cdad201c6d/Untitled.png"><img style="width:351px" src="Module%201%20-%20Introduction%20to%20Economics%20c174c6f6d08a44839a4759cdad201c6d/Untitled.png"/></a></figure><p id="0dee5374-3d02-4f8f-b608-492744dd8b32" class="">
+</p><h3 id="af1de8fc-f86c-4c27-98a3-31cc50764e57" class=""><strong>Law of Supply and Demand</strong></h3><p id="1455fba4-1e7d-4fbe-8e31-e51f7e40a755" class="">The law of supply and demand is a theory that explains the interaction between the sellers of a resource and the buyers for that resource. The theory defines what effect the relationship between the availability of a particular product and the desire (or demand) for that product has on its price. Generally, low supply and high demand increase price and vice versa.</p><h3 id="bf06d963-6648-4b46-84bb-ab7a00e9179e" class=""><strong>Understanding the Law of Supply and Demand</strong></h3><p id="9e9430c3-a139-42aa-b531-f7c7fea98de1" class="">The law of supply and demand, one of the most basic economic laws, ties into almost all economic principles in some way. In practice, supply and demand pull against each other until the market finds an equilibrium price. However, multiple factors can affect both supply and demand, causing them to increase or decrease in various ways. It was extensively studied by Murray N. Rothbard.</p><p id="ba47b1fe-c2a8-445f-9a19-9dd1c839f9dc" class="">Law of Demand vs. Law of Supply</p><p id="ca1a2d3e-6be9-4714-8182-de43253dbb3f" class="">The law of demand states that, if all other factors remain equal, the higher the price of a good, the less people will demand that good. In other words, the higher the price, the lower the quantity demanded. The amount of a good that buyers purchase at a higher price is less because as the price of a good goes up, so does the opportunity cost of buying that good. As a result, people will naturally avoid buying a product that will force them to forgo the consumption of something else they value more. The chart below shows that the curve is a downward slope.</p><p id="58c26b90-d6ea-4c3e-9c4f-345e943762d3" class="">Like the law of demand, the law of supply demonstrates the quantities that will be sold at a certain price. But unlike the law of demand, the supply relationship shows an upward slope. This means that the higher the price, the higher the quantity supplied. Producers supply more at a higher price because selling a higher quantity at higher price increases revenue.</p><p id="bcc332eb-7344-4f7b-9543-442cf356415a" class="">Unlike the demand relationship, however, the supply relationship is a factor of time. Time is important to supply because suppliers must, but cannot always, react quickly to a change in demand or price. So it is important to try and determine whether a price change that is caused by demand will be temporary or permanent.</p><p id="36c9bf39-4ed0-41b2-b9c0-1a20ddbd5fac" class="">Let&#x27;s say there&#x27;s a sudden increase in the demand and price for umbrellas in an unexpected rainy season; suppliers may simply accommodate demand by using their production equipment more intensively. If, however, there is a climate change, and the population will need umbrellas year<a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a>round, the change in demand and price will be expected to be long term; suppliers will have to change their equipment and production facilities in order to meet the long<a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a>term levels of demand.</p><h3 id="1d1af367-017b-40bc-8e9d-2ef551234790" class=""><strong>How Do Supply and Demand Create an Equilibrium Price?</strong></h3><p id="86af233c-8eb6-4f21-922e-a67c79ce790e" class="">Also called a market<a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a>clearing price, the equilibrium price is the price at which the producer can sell all the units he wants to produce and the buyer can buy all the units he wants.</p><p id="b21168b0-fdc6-40a2-ade3-1062e43dab5e" class="">At any given point in time, the supply of a good brought to market is fixed. In other words the supply curve in this case is a vertical line, while the demand curve is always downward sloping due to the law of diminishing marginal utility. Sellers can charge no more than the market will bear based on consumer demand at that point in time. Over time however, suppliers can increase or decrease the quantity they supply to the market based on the price they expect to be able to charge. So over time the supply curve slopes upward; the more suppliers expect to be able to charge, the more they will be willing to produce and bring to market.</p><p id="6dbc3e05-c484-4fbf-914c-b58d41feadde" class="">With an upward sloping supply curve and a downward sloping demand curve it is easy to visualize that at some point the two will intersect. At this point, the market price is sufficient to induce suppliers to bring to market that same quantity of goods that consumers will be willing to pay for at that price. Supply and demand are balanced, or in equilibrium. The precise price and quantity where this occurs depends on the shape and position of the respective supply and demand curves, each of which can be influenced by a number of factors.</p><p id="36f72366-11f4-4a3f-ae64-eecc09ba161d" class="">
+</p><figure id="f8385337-ede9-4619-88ad-e66f7c73418c" class="image"><a href="Module%201%20-%20Introduction%20to%20Economics%20c174c6f6d08a44839a4759cdad201c6d/Untitled%201.png"><img style="width:521px" src="Module%201%20-%20Introduction%20to%20Economics%20c174c6f6d08a44839a4759cdad201c6d/Untitled%201.png"/></a></figure><p id="81be7b88-cb7c-43f2-8296-4dab076e2a7a" class="">
+</p><h3 id="097e2809-ed5e-410f-b163-1dbcc055b4be" class=""><strong>Factors Affecting Supply</strong></h3><p id="91bad5a6-344a-4429-b0ad-42bf73c6d488" class="">Production capacity, production costs such as labor and materials, and the number of competitors directly affect how much supply businesses can create. Ancillary factors such as material availability, weather, and the reliability of supply chains also can affect supply.</p><h3 id="abe8ef23-beab-4b34-bb62-57fed5ac9f13" class=""><strong>Factors Affecting Demand</strong></h3><p id="18e729d2-5271-4374-b9d7-91513da06b3b" class="">The number of available substitutes, consumer preferences, and the shifts in the price of complementary products affect demand. For example, if the price of video game consoles drops, the demand for games for that console may increase as more people buy the console and want games for it.</p><h2 id="c5b10bf0-ae3f-4950-979b-ef3fa16166a2" class="">Lesson 5</h2><h3 id="087887c4-e4fe-413e-bc6c-45eaa6baaada" class=""><strong>What Is Elasticity?</strong></h3><p id="5f491001-9444-43a2-9d0b-dfec7c4a5249" class="">Elasticity is a measure of a variable&#x27;s sensitivity to a change in another variable, most commonly this sensitivity is the change in price relative to changes in other factors. In business and economics, elasticity refers to the degree to which individuals, consumers or producers change their demand or the amount supplied in response to price or income changes. It is predominantly used to assess the change in consumer demand as a result of a change in a good or service&#x27;s price.</p><h3 id="5a271382-a007-4d55-807e-b5a43a53a49b" class=""><strong>Key Ideas about Elasticity</strong></h3><p id="a4aa7cb0-9be8-4fe2-bb42-9398972b9d02" class=""><em>Elasticity is an economic measure of how sensitive an economic factor is to another, for example changes in price to supply or demand, or changes in demand to changes in income.</em></p><p id="4bf0b6c7-1b75-43b3-921e-aeae59927c0a" class=""><em>If demand for a good or service is relatively static even when the price changes, demand is said to be inelastic, and its coefficient of elasticity is less than 1.0.</em></p><p id="44fd8a92-5fb6-4d23-a85f-9db637048f2e" class=""><em>Examples of elastic goods include clothing or electronics, while inelastic goods are items like food and prescription drugs.</em></p><h3 id="2386e496-aaf1-4325-9160-e96b33135df5" class=""><strong>How Elasticity Works</strong></h3><p id="e10bbb0d-b897-4a0b-a068-99e29ded6609" class="">When the value of elasticity is greater than 1.0, it suggests that the demand for the good or service is affected by the price. A value that is less than 1.0 suggests that the demand is insensitive to price, or inelastic. Inelastic means that when the price goes up, consumers’ buying habits stay about the same, and when the price goes down, consumers’ buying habits also remain unchanged. If elasticity is zero it is known as perfectly inelastic. If elasticity = 0, then it is said to be &#x27;perfectly&#x27; inelastic, meaning its demand will remain unchanged at any price. There are probably no real<a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a>world examples of perfectly inelastic goods. If there were, that means producers and suppliers would be able to charge whatever they felt like and consumers would still need to buy them. The only thing close to a perfectly inelastic good would be air and water, which no one controls.</p><p id="2845a8aa-e89c-4c53-932f-fc2c93cf6f94" class="">Elasticity is an economic concept used to measure the change in the aggregate quantity demanded for a good or service in relation to price movements of that good or service. A product is considered to be elastic if the quantity demand of the product changes drastically when its price increases or decreases. Conversely, a product is considered to be inelastic if the quantity demand of the product changes very little when its price fluctuates.</p><p id="330ac18d-d81a-44a0-ad3a-6d9dd44dcca2" class="">For example, insulin is a product that is highly inelastic. For diabetics who need insulin, the demand is so great that price increases have very little effect on the quantity demanded. Price decreases also do not affect the quantity demanded; most of those who need insulin aren&#x27;t holding out for a lower price and are already making purchases.</p><p id="f40e1aa9-8e90-4c06-bda0-b2bab848e8cb" class="">On the other side of the equation are highly elastic products. Bouncy balls, for example, are highly elastic in that they aren&#x27;t a necessary good, and consumers will only decide to make a purchase if the price is low. Therefore, if the price of bouncy balls increases, the quantity demanded will greatly decrease, and if the price decreases, the quantity demanded will increase.</p><h3 id="9ee427c1-4621-49f2-8e64-a9da1e0ebf7a" class=""><strong>Types of Elasticity</strong></h3><p id="4e8c3e77-8a59-4870-a97e-a1e748dee728" class="">Demand elasticity is an economic measure of the sensitivity of demand relative to a change in another variable. The quantity demanded of a good or service depends on multiple factors, such as price, income and preference. Whenever there is a change in these variables, it causes a change in the quantity demanded of the good or service. For example, when there is a relationship between the change in the quantity demanded and the price of a good or service, the elasticity is known as price elasticity of demand. The two other main types of demand elasticity are income elasticity of demand and cross elasticity of demand.</p><p id="5465e45e-14a7-40e4-b67d-f22618451588" class="">Income elasticity of demand refers to the sensitivity of the quantity demanded for a certain good to a change in real income of consumers who buy this good, keeping all other things constant. The formula for calculating income elasticity of demand is the percent change in quantity demanded divided by the percent change in income. With income elasticity of demand, you can tell if a particular good represents a necessity or a luxury.</p><p id="161bf270-8802-4c55-b6f1-8b5e21991c16" class="">The cross elasticity of demand is an economic concept that measures the responsiveness in the quantity demanded of one good when the price for another good changes. Also called cross<a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a>price elasticity of demand, this measurement is calculated by taking the percentage change in the quantity demanded of one good and dividing it by the percentage change in the price of the other good.</p><p id="ae9bd26c-8840-4c31-acbf-8022af278d20" class="">Price elasticity of supply measures the responsiveness to the supply of a good or service after a change in its market price. According to basic economic theory, the supply of a good will increase when its price rises. Conversely, the supply of a good will decrease when its price decreases.</p><p id="8bc5b94e-ba16-45e5-8968-d7addc945ba7" class=""><strong>Factors Affecting Demand Elasticity</strong></p><ol type="1" id="b966014b-b58f-49cd-9e1a-0cbd890a7ef4" class="numbered-list" start="1"><li>Availability of Substitutes</li></ol><ol type="1" id="59b268da-346c-4630-b25d-e9ca71dac24d" class="numbered-list" start="2"><li>Necessity</li></ol><ol type="1" id="18878c68-d7a6-4014-93a1-72c65a62c9df" class="numbered-list" start="3"><li>Time</li></ol><h3 id="a5e266db-67b0-41ef-a0d6-505cfd3d4d5b" class=""><strong>How Does Price Elasticity Affect Supply?</strong></h3><p id="d5be9d9d-21cb-44ac-82c2-20afd47dd532" class="">Price elasticity of supply measures the responsiveness to the supply of a good or service after a change in its market price. According to basic economic theory, the supply of a good will increase when its price rises. Conversely, the supply of a good will decrease when its price decreases.</p><p id="20eeb5e9-f32c-494f-8b0f-746c6a2ebe1f" class="">There’s also price elasticity of demand. This measures how responsive the quantity demanded is affected by a price change. Overall, price elasticity measures how much the supply or demand of a product changes based on a given change in price. Elastic means the product is considered sensitive to price changes. Inelastic means the product is not sensitive to price movements.</p><p id="a419a855-24b6-4e2f-bc6e-64c5eaabb9c2" class="">Price elasticity of supply = % Change in Supply / % Change in Price</p><h3 id="d192dafa-7cdf-4138-8427-40e0b63fab1d" class=""><strong>The Law of Supply</strong></h3><p id="c678ded3-a563-4e5c-9336-f5720e61778f" class="">In a free market, producers compete with each other for profits. Since profits are never constant across time or across different goods, entrepreneurs shift resources and labor efforts towards those goods that are more profitable and away from goods that are less profitable. This causes an increase in the supply of highly valued goods and a decrease in supply for less<a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731">-</a>valued goods.</p><p id="910f04d3-f74c-4611-a651-8326025ac659" class="">Economists refer to the tendency for price and quantity supplied to be related to the law of supply. To illustrate, suppose that consumers begin demanding more oranges and fewer apples. There are more dollars bidding for oranges and fewer for apples, which causes orange prices to rise and apple prices to drop. Producers of fruit, seeing the shift in demand, decide to grow more oranges and fewer apples because it can result in higher profits.</p><p id="3e4d7787-da3c-40dc-b752-c84fd16f4553" class="">There are five types of price elasticity of supply, including perfectly and relatively inelastic, unit elastic, and perfectly, and relatively elastic.</p><h2 id="daf054c4-daf0-4521-a17b-6164f3185119" class="">Lesson 6</h2><h3 id="b128d2d2-aff0-4543-ae6a-01ff44a8238e" class=""><strong>What Is Inflation?</strong></h3><p id="6b5299a0-a60d-4c1e-94fd-4fa3a357cc9c" class="">Inflation is a quantitative measure of the rate at which the average price level of a basket of selected goods and services in an economy increases over some period of time. It is the rise in the general level of prices where a unit of currency effectively buys less than it did in prior periods. Often expressed as a percentage, inflation thus indicates a decrease in the purchasing power of a nation’s currency.</p><p id="867c4a5f-be88-4eab-ab5a-42ccd07e7752" class="">Inflation can be contrasted with deflation, which occurs when prices instead decline.</p><h3 id="10309515-4809-4d51-944f-02ef506df980" class=""><strong>Key Ideas in Inflation</strong></h3><p id="72aa3997-729c-453c-9037-da41df6401e5" class=""><em>Inflation is the rate at which the general level of prices for goods and services is rising and, consequently, the purchasing power of currency is falling.</em></p><p id="43d4b263-869d-46f6-8da7-67ba4d53fcac" class=""><em>Inflation is classified into three types: Demand</em><a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731"><em>-</em></a><em>Pull inflation, Cost</em><a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731"><em>-</em></a><em>Push inflation, and Built</em><a href="https://collvle.neu.edu.ph/mod/page/view.php?id=140731"><em>-</em></a><em>In inflation.</em></p><p id="3ea1c3d1-fae3-41db-8a92-8ddb8527f10e" class=""><em>Most commonly used inflation indexes are the Consumer Price Index (CPI) and the Wholesale Price Index (WPI).</em></p><p id="1b59bab6-f96b-444c-85ac-cdd50a115715" class=""><em>Inflation can be viewed positively or negatively depending on the individual viewpoint and rate of change.</em></p><p id="5da32559-c0f2-459a-83ab-7e954ba4d5ed" class=""><em>Those with tangible assets, like property or stocked commodities, may like to see some inflation as that raises the value of their assets.</em></p><p id="db479abd-9499-4161-9780-bb3b398ea036" class=""><em>People holding cash may not like inflation, as it erodes the value of their cash holdings.</em></p><p id="35e1f3d8-7fc1-4ba2-aa8b-b5e233741dfd" class=""><em>Ideally, an optimum level of inflation is required to promote spending to a certain extent instead of saving, thereby nurturing economic growth</em>.</p><p id="236689d8-76f2-46ba-b057-2b91d854365d" class="">
+</p><figure id="e5f18da6-938f-4b6b-af49-8503a7664dc8" class="image"><a href="Module%201%20-%20Introduction%20to%20Economics%20c174c6f6d08a44839a4759cdad201c6d/Untitled%202.png"><img style="width:408px" src="Module%201%20-%20Introduction%20to%20Economics%20c174c6f6d08a44839a4759cdad201c6d/Untitled%202.png"/></a></figure><p id="8488c0c0-ab10-4dba-919e-255d8105ba4b" class="">
+</p><h3 id="efd8bd32-6466-482c-9720-6bef1814f06c" class="">Reference</h3><p id="c29a8588-c326-4540-b819-8aa2d5dfcca8" class="">Manapat, Carlos L., Pedrosa, Fernando T. Economics, Taxation and Agrarian Reform. C &amp; E Publishing. 2018</p><p id="d084a68d-721f-4cab-bc86-9d3e1d7d9bcd" class="">
+</p><p id="de5443a6-3410-459e-81c8-41c1badc26b8" class="">
+</p></div></article></body></html>
