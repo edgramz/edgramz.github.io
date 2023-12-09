@@ -1,0 +1,677 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Cambodia Travel Website</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="26222dfe-829e-4a24-afc7-db873e0765d9" class="page sans"><header><h1 class="page-title">Cambodia Travel Website</h1><p class="page-description"></p></header><div class="page-body"><h3 id="6c182579-1262-42c3-b0e9-7534f8e3e398" class="block-color-blue">What web technologies and applications will be used?</h3><p id="7d3bc0ac-b8de-464a-9634-b3821fc16df8" class="">Scripting and programming languages: HTML, CSS, JavaScript, PHP, MySQL</p><p id="146248ca-2b0c-40ed-833d-bc1ad3c6e50d" class="">Content Management System: Drupal or WordPress</p><p id="79e58b19-2554-44d9-bcff-1f0ebd6e664e" class="">Domain: For demo purposes, we will be using a subdomain of a personal website (Example: pbdit-cambodia.eirez.com) or a free domain</p><p id="30d4a7ac-da5b-4257-a048-6ef495a1ce36" class="">Hosting: Free hosting or shared with a personal website hosting</p><h3 id="15304384-8109-466f-a724-cc95d285252a" class="block-color-blue">Who will be the site’s audience?</h3><p id="4b11ed4f-dd29-4bb2-a869-14363f94feef" class="">1. Millennials: The Adventurous Explorers</p><p id="f91bb6de-32fe-409c-8438-eea4132e39fa" class="">2. Solo Travelers: The Independent Adventurers</p><p id="b805f941-193a-4651-92ad-7c6b8ecd6238" class="">3. Family Travelers: The Memorable Escapades</p><p id="65b42109-03cf-4cda-9ea5-c4224e61e2c4" class="">4. Business Travelers: The Busy Professionals</p><p id="5c8fc653-c48d-49be-a0f3-2997dcd87d8d" class="">5. Adventure Seekers: The Thrill Enthusiasts</p><p id="49531ae1-c5fe-4461-ac74-a10426eef411" class="">6. Luxury Travelers: The Discerning Connoisseurs</p><p id="87cd35fb-8809-4fa1-b118-95522483ec2f" class="">7. Digital Nomads: The Remote Workers</p><p id="f2ba670b-0b38-41c9-92ff-491e21909d21" class="">8. Wellness Travelers: The Mindful Retreat Seekers</p><h3 id="4713cb01-03d6-4d85-a454-2b684ac70f72" class="block-color-blue">What is the purpose of the site?</h3><p id="2a9af927-7437-4174-ac19-d2771e466afc" class="">The purpose of creating a travel website is to provide comprehensive information and resources for travelers who are interested in visiting Cambodia. The website aims to inspire, inform, and assist various types of travelers, including millennials, solo travelers, family travelers, business travelers, adventure seekers, luxury travelers, digital nomads, and wellness travelers. It will showcase the unique attractions, experiences, and accommodations available in Cambodia, catering to the diverse interests and preferences of the audience.</p><h3 id="ce895824-7b8d-436a-9a62-194c27f42903" class="block-color-blue">What sections, features, and functionalities are required?</h3><ol type="1" id="da79ebcb-14d6-4fea-8243-7d6261486ce6" class="numbered-list" start="1"><li>Home Page: A visually appealing introduction to the website, highlighting the key attractions and experiences in Cambodia.<figure id="a0b5cbd8-4fd9-4f31-bc9e-6eadd7675c3a" class="image"><a href="cambodia-travel-website-2/Untitled.png"><img style="width:1715px" src="cambodia-travel-website-2/Untitled.png"/></a></figure></li></ol><ol type="1" id="3f61c857-7f22-496c-baa5-97c29740e825" class="numbered-list" start="2"><li>Destination Guides: Detailed information about popular destinations in Cambodia, including historical sites, cultural landmarks, natural wonders, and off-the-beaten-path locations.<figure id="55bc3f5f-57dd-42b2-96e9-5dc255a0ef87" class="image"><a href="cambodia-travel-website-2/Untitled%201.png"><img style="width:1290px" src="cambodia-travel-website-2/Untitled%201.png"/></a></figure></li></ol><ol type="1" id="15890134-8c28-4459-8d0c-48fce53968ea" class="numbered-list" start="3"><li>Travel Tips and Resources: Practical advice and tips for travelers, including visa requirements, transportation options, safety guidelines, and local customs.<figure id="571ee150-0f78-4eaf-9a96-091960241b2a" class="image"><a href="cambodia-travel-website-2/Untitled%202.png"><img style="width:1024px" src="cambodia-travel-website-2/Untitled%202.png"/></a></figure><figure id="487a533a-f2ab-42d9-b852-dd88c0265a0a" class="image"><a href="cambodia-travel-website-2/Untitled%203.png"><img style="width:1024px" src="cambodia-travel-website-2/Untitled%203.png"/></a></figure></li></ol><ol type="1" id="a9b23860-36d1-4aae-ad3e-d4f666f1eab5" class="numbered-list" start="4"><li>Itineraries: Sample itineraries for different types of travelers, suggesting the best places to visit and activities to do in Cambodia.<figure id="eb2038ab-cc78-484f-8d4d-a89eb3a20c0d" class="image"><a href="cambodia-travel-website-2/Untitled%204.png"><img style="width:1056px" src="cambodia-travel-website-2/Untitled%204.png"/></a></figure></li></ol><ol type="1" id="6b8e6dd9-ab11-4301-8b9e-c5b36a0b15af" class="numbered-list" start="5"><li>Accommodation Listings: A directory of hotels, resorts, guesthouses, and other types of accommodations in Cambodia, with detailed descriptions, reviews, and booking options.<figure id="bbbc4e00-ae00-4524-9eec-3093b5675e48" class="image"><a href="cambodia-travel-website-2/Untitled%205.png"><img style="width:1000px" src="cambodia-travel-website-2/Untitled%205.png"/></a></figure></li></ol><ol type="1" id="9ed770f6-ac9f-41cc-9894-d2d395d04c3a" class="numbered-list" start="6"><li>Activities and Excursions: Information about various activities and excursions available in Cambodia, such as temple visits, wildlife tours, adventure sports, cooking classes, and cultural experiences.</li></ol><ol type="1" id="44b73285-358a-4139-9361-a6bfb7408986" class="numbered-list" start="7"><li>Local Cuisine and Dining Guide: Recommendations for traditional Cambodian dishes, popular restaurants, street food markets, and food tours.</li></ol><ol type="1" id="b666a387-1fbd-4574-b63d-6c8e8ebcc5b1" class="numbered-list" start="8"><li>Transportation Guide: Information on how to get around Cambodia, including options for domestic flights, buses, trains, and taxis, as well as local transportation tips.</li></ol><ol type="1" id="bf3ab586-4b13-465b-9aad-66b65cc8dde7" class="numbered-list" start="9"><li>Travel Blog and Stories: Engaging travel articles, personal stories, and travelogues related to Cambodia, written by travelers and locals.</li></ol><ol type="1" id="0d33acd8-b472-4897-a0a6-e3a877a5b73f" class="numbered-list" start="10"><li>Language and Cultural Guide: Basic phrases in Khmer, the local language, and insights into Cambodian culture, traditions, and etiquette.</li></ol><ol type="1" id="34ea1fe7-6bdb-4a95-8cbb-dfb0c36ece29" class="numbered-list" start="11"><li>Social Media Integration: Links to the website&#x27;s social media profiles, allowing users to follow and share content on platforms like Facebook, Instagram, and Twitter.</li></ol><ol type="1" id="5f90d233-1efd-480c-87f0-def63b88d815" class="numbered-list" start="12"><li>Search and Filter Functionality: Users should be able to search for specific information, destinations, accommodations, and activities on the website, with filtering options based on preferences.</li></ol><ol type="1" id="1426e2b8-6a96-4085-8cb7-ff7d1973b030" class="numbered-list" start="13"><li>Mobile-Friendly Design: Ensuring that the website is responsive and optimized for mobile devices, allowing travelers to access information on the go.</li></ol><ol type="1" id="e0f2e0cf-5f76-4a77-b731-8eb520a7589f" class="numbered-list" start="14"><li>Contact and Support: A contact form or email address for inquiries, as well as customer support options for users who need assistance.</li></ol><p id="563e4bc5-e472-44a0-b724-dc250d2f57c2" class="">The website aims to provide a comprehensive platform for travelers to plan their trip to Cambodia, offering a seamless user experience and valuable insights into the country&#x27;s attractions, culture, and travel resources.</p><h3 id="ab0d2627-d0bf-4c51-9e11-ed1ad190b009" class="block-color-blue">What the website is trying to say or sell?</h3><p id="97246964-863d-454f-9a20-cc58d8b522c6" class="">On January 27, 2022, a campaign named &quot;Cambodia: Safe and Green Tourism Destination&quot; was launched, aiming at reviving the COVID-19-hit tourism industry. According to Tourism Minister Thong Khon, &quot;This campaign is a strategy to attract tourists from around the world as well as from countries in the Association of Southeast Asian Nations to Cambodia.”</p><p id="94a4aea8-000d-4943-97f2-e9828e7e5a91" class="">The website will be used to support the said campaign and is not selling any specific product or service, but rather aims to inspire, inform, and assist travelers in planning their trip to Cambodia.</p><p id="75dd1567-3bc3-46ec-81b2-f85326580d8b" class="block-color-blue">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
