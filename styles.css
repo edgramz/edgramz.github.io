@@ -1,0 +1,148 @@
+/* This is a comment */
+
+body {
+	margin: 8px;
+    display: block;
+	width: 100%;
+	max-width: 1280px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("images/pattern.png");
+}
+
+#outer-frame {
+    background-color: #b5ddf0;
+    padding: 15px;
+}
+
+#mainHeading {
+    color: red;
+}
+
+#testP {
+    padding: 5px;
+    border: #16687d;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+#testP a {
+    /*text-decoration: none;*/
+    color: green;
+    font-weight: bold;
+}
+
+.funParagraph {
+    color: green;
+}
+
+h1, h2, h3 {
+	margin: 0;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+main h2 {
+	padding: 1.25em 0 0;
+    color: #023047;
+}
+
+header h1 {
+	text-align: center;
+    margin-bottom: 0.2em;
+}
+
+section {
+	margin: 1.75em 0;
+}
+
+section:first-child {
+	margin-top: 0;
+}
+
+section:last-child {
+	margin-bottom: 0;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    list-style-type: none;
+	text-align: center;
+    margin: 0;
+	padding: 0;
+    overflow: hidden;
+    background-color: #16687d;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    padding: 16px 16px;    
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #023047;
+}
+
+footer {
+	text-align: center;
+	padding: 3em 0 0.2em;
+}
+
+footer p {
+	display: inline-block;
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+}
+
+.main-col {
+    width: 935px;
+    float: left;
+}
+
+.side-bar {
+    width: 270px;
+    padding: 0 15px 15px;
+    margin: 0;
+    float: right;
+    background-color: #93d0ec;
+}
+
+.side-bar section {
+    margin: 0;
+}
+
+blockquote {
+    border-left: 10px solid #023047;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+    color: #023047;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+blockquote p {
+    display: inline;
+}
